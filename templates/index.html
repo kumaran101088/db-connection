@@ -8,7 +8,13 @@
 </head>
 <body>
     <h1>Hello from GCP Cloud</h1>
-    <br><br>
+    <br>
+    <form action="{{url_for('index')}}" method="post">
+        <label for="name">Enter Name</label>
+        <input type="text" name="name" id="name">
+        <button type="submit">submit</button>
+    </form>
+    <br>
     <a href="{{url_for('home')}}">home</a>
     <table>
         <thead>
