@@ -22,8 +22,8 @@ def home():
 
 @app.route('/data')
 def index():
-    connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='35.200.145.113')
-    # connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host=unix_socket)
+    # connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='35.200.145.113')
+    connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host=unix_socket)
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM simple;')
     data = [row for row in cursor]
