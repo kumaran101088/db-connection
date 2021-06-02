@@ -14,9 +14,6 @@
 
 runtime: python39
 
-beta_settings:
-  cloud_sql_instances: flask-sql
-
 handlers:
   # This configures Google App Engine to serve the files in the app's static
   # directory.
