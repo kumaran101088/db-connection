@@ -2,8 +2,8 @@ import psycopg2
 from flask import Flask, render_template
 
 def get_data_from_cloud_sql():
-    # connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='35.200.145.113')
-    connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='/cloudsql/flask-sql/.s.PGSQL.5432')
+    connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='35.200.145.113')
+    # connection = psycopg2.connect(dbname='checking', user='flaskuser', password='password', host='/cloudsql/flask-sql/.s.PGSQL.5432')
     cursor = connection.cursor()
     cursor.execute('SELECT * FROM simple;')
     data = [row for row in cursor]
